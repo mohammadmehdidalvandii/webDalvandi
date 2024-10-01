@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  /* <<<< add Font-Face >>>> */
+  @font-face {
+    font-family: iranMedium;
+    src: url("/public/assets/font/IRANSansX-Medium.woff") format(woff);
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @font-face {
+    font-family: iranBold;
+    src: url("/public/assets/font/IRANSansX-Bold.woff") format(woff);
+  }
+  @font-face {
+    font-family: iranBlack;
+    src: url("/public/assets/font/IRANSansX-Black.woff");
+  }
+  body{
+    @apply m-0 py-0 box-border text-base text-font-100 font-iranMedium  bg-background-200;
   }
 }
