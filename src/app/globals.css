@@ -6,17 +6,26 @@
   /* <<<< add Font-Face >>>> */
   @font-face {
     font-family: iranMedium;
-    src: url("/public/assets/font/IRANSansX-Medium.woff") format(woff);
+    src: url("/assets/font/IRANSansX-Medium.woff") format(woff);
   }
   @font-face {
     font-family: iranBold;
-    src: url("/public/assets/font/IRANSansX-Bold.woff") format(woff);
+    src: url("/assets/font/IRANSansX-Bold.woff") format(woff);
   }
   @font-face {
     font-family: iranBlack;
-    src: url("/public/assets/font/IRANSansX-Black.woff");
+    src: url("/assets/font/IRANSansX-Black.woff");
   }
   body{
     @apply m-0 py-0 box-border text-base text-font-100 font-iranMedium  bg-background-200;
+  }
+}
+
+@layer components{
+  .link{
+   @apply block text-xl font-iranBlack  duration-300 ease-linear hover:text-secondary-100;
+  }
+  .link_active{
+   @apply block text-xl font-iranBlack text-secondary-100;
   }
 }

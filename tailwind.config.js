@@ -45,7 +45,8 @@ module.exports = {
         "sm": "576px",
         "md":"768px",
         "lg":"992px",
-        "xl":"1220px"
+        "xl":"1220px",
+        '2xl':"1420px",
       }
     },
   },
