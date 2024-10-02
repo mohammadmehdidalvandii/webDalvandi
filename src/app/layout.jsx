@@ -2,7 +2,7 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: "محمدمهدی دالوندی",
+  title: " فرانت اند |  دالوندی",
   description: "برنامه نویس فرانت اند ",
 };
 
