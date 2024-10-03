@@ -1,4 +1,5 @@
 import Navbar from '@/components/module/Navbar/Navbar';
+import About from '@/components/template/about/About/About';
 import React from 'react'
 
 export const metadata = {
@@ -10,6 +11,7 @@ function page() {
   return (
     <>
         <Navbar/>
+        <About/>
     </>
   )
 }
