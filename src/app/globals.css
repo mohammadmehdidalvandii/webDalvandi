@@ -34,6 +34,15 @@
   .btn_secondary{
     @apply flex justify-center items-center w-[120px] h-10 rounded-lg bg-secondary-default text-white text-lg duration-300 hover:bg-secondary-100 ; 
   }
+  /* custom style swiper navigation */
+    .btn_next{
+      @apply flex justify-center items-center w-10 h-10 text-3xl rounded-50 duration-300 hover:bg-primary-100 hover:text-white;
+    }
+    .btn_prev{
+      @apply flex justify-center items-center w-10 h-10 text-3xl rounded-50 duration-300 hover:bg-primary-100 hover:text-white;
+    }
+/* custom style swiper navigation */
+
 }
 /* custom style swiper Cards */
 .swiperCard .swiper{
@@ -51,7 +60,7 @@
   width: 250px;
   height: 350px;
   }
-  .swiperCard , .swiper-slide  {
+  .swiperCard ,.swiperCard .swiper-slide  {
     display: flex;
     align-items: center;
     justify-content: center;

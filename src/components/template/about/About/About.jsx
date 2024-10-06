@@ -20,7 +20,7 @@ function About() {
                 grabCursor={true}
                 modules={[EffectCards]}
                 // initialSlide={1}
-                className="mySwiper"
+                className="mySwiper swiperCard"
               >
                 <SwiperSlide>
                   <h6 className="block font-iranBold text-2xl">من کی ام ؟</h6>
