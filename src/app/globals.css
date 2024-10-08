@@ -62,6 +62,7 @@
   justify-content: center;
   width: 250px;
   height: 350px;
+  background-color: #fff;
   }
   .swiperCard ,.swiperCard .swiper-slide  {
     display: flex;
@@ -71,6 +72,7 @@
     width: 250px !important;
     height: 350px !important;
     color: white;
+    background-color: #fff;
     border-radius: 0.5rem;
     }
    .swiperCard .swiper-slide  {
@@ -80,46 +82,9 @@
       flex-direction: column;
       width: 250px !important;
       height: 350px !important;
-      color: white;
+      color:#3D434F;
+      background-color: #fff;
+      border: 1px solid #0284C7;
       border-radius: 0.5rem;
       }
-.swiperCard .swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
-}
-
-.swiperCard  .swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
-}
-
-.swiperCard .swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
-}
-
-.swiperCard .swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
-}
-
-.swiperCard .swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
-}
-
-.swiperCard .swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
-}
-
-.swiperCard .swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
-}
-
-.swiperCard .swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
-}
-
-.swiperCard .swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
-}
-
-.swiperCard .swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
-} 
 /* custom style swiper Cards */
