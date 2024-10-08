@@ -41,6 +41,9 @@
     .btn_prev{
       @apply flex justify-center items-center w-10 h-10 text-3xl rounded-50 duration-300 hover:bg-primary-100 hover:text-white;
     }
+    .title{
+      @apply block text-center font-iranBlack text-3xl text-font-300;
+    }
 /* custom style swiper navigation */
 
 }

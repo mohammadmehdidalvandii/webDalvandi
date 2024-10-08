@@ -5,7 +5,7 @@ function Contact() {
     <section className="block mt-12 mb-8">
         <div className="container">
             <div className="block">
-                <h5 className="block text-center font-iranBlack text-3xl text-font-300">تماس با من</h5>
+                <h5 className="title">تماس با من</h5>
             </div>
             <div className="xs:flex xs:flex-col-reverse  md:grid mt-12 xs:grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2">
                 <div className="block mt-10">

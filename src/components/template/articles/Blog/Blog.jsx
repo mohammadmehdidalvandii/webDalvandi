@@ -6,9 +6,9 @@ function Blog() {
     <section className="block mt-12">
       <div className="container">
         <div className="block">
-          <h6 className="block text-center font-iranBlack text-3xl text-font-300">
+          <h5 className="block text-center font-iranBlack text-3xl text-font-300">
             مقالات من{" "}
-          </h6>
+          </h5>
         </div>
         {/* <div className="block mt-12">
           <h6 className="block text-center font-iranBlack text-3xl text-secondary-default">

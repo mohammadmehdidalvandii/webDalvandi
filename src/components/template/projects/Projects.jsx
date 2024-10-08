@@ -6,7 +6,7 @@ function Projects() {
     <section className="block mt-12 mb-8"> 
        <div className="container">
        <div className="block">
-            <h4 className="block text-center font-iranBlack text-3xl">پروژه های من</h4>
+            <h5 className="block text-center font-iranBlack text-3xl text-font-300">پروژه های من</h5>
         </div>
         <div className="grid mt-12 gap-6 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
             <ProjectCart/>
