@@ -34,6 +34,9 @@
   .btn_secondary{
     @apply flex justify-center items-center w-[120px] h-10 rounded-lg bg-secondary-default text-white text-lg duration-300 hover:bg-secondary-100 ; 
   }
+  .btn_red{
+    @apply flex justify-center items-center w-[120px] h-10 rounded-lg bg-red-700 text-white text-lg duration-300 hover:bg-red-500
+  }
   /* custom style swiper navigation */
     .btn_next{
       @apply flex justify-center items-center w-10 h-10 text-3xl rounded-50 duration-300 hover:bg-primary-100 hover:text-white;
