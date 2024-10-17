@@ -14,7 +14,7 @@ function Topbar() {
                     <Link href='/Admin' className="block font-iranBold text-font-300 duration-300 ease-linear hover:text-secondary-100">درباره من</Link>
                 </li>
                 <li className="block">
-                    <Link href='/Admin' className="block font-iranBold text-font-300 duration-300 ease-linear hover:text-secondary-100">پروژه من</Link>
+                    <Link href='/Admin/Projects' className="block font-iranBold text-font-300 duration-300 ease-linear hover:text-secondary-100">پروژه من</Link>
                 </li>
                 <li className="block">
                     <Link href='/Admin' className="block font-iranBold text-font-300 duration-300 ease-linear hover:text-secondary-100">بلاگ من</Link>
