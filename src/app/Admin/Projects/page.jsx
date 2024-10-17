@@ -1,4 +1,5 @@
 import AdminLayout from '@/components/layout/AdminLayout/AdminLayout'
+import AddProject from '@/components/template/admin/AddProject/AddProject'
 import Link from 'next/link'
 import React from 'react'
 
@@ -42,6 +43,7 @@ function page() {
                 </div>
             </div>
         </section>
+        <AddProject/>
     </AdminLayout>
   )
 }
