@@ -22,6 +22,9 @@ function Topbar() {
                 <li className="block">
                     <Link href='/Admin' className="block font-iranBold text-font-300 duration-300 ease-linear hover:text-secondary-100">تماس با من</Link>
                 </li>
+                <li className="block">
+                    <button className="block font-iranBold text-font-300 duration-300 ease-linear hover:text-red-700">خروج</button>
+                </li>
             </ul>
         </div>
     </section>
