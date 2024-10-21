@@ -28,6 +28,7 @@ export async function POST (req){
         };
 
         const user = await UserModel.findOne({email});
+        console.log("user=>" ,user)
 
         if(!user){
             return Response.json(
@@ -48,7 +49,7 @@ export async function POST (req){
         const accessToken = generateAccessToken({email});
         const refreshToken = generateRefreshToken({email});
 
-        await UserModel.findByIdAndUpdate(
+        await UserModel.findOneAndUpdate(
             {email},
             {
                 $set:{refreshToken}
