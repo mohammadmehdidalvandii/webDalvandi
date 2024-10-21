@@ -4,12 +4,12 @@ import { generateAccessToken , hashPassword } from "@/utils/auth";
 
 export async function POST (req){
     connectToDB();
-    const body = await req.body;
+    const body = await req.json();
     const {name  , email , password}= body;
 
     // Validation
     const isUserExist = await UserModel.findOne({
-        $or:[{name} , {email} , {phone}],
+        $or:[{name} , {email} ],
     });
 
     if(isUserExist){
@@ -20,6 +20,7 @@ export async function POST (req){
     }
 
     const hashedPassword = await hashPassword(password);
+    console.log("hashpassword",hashedPassword)
     const accessToken = generateAccessToken({name});
 
     const users = await UserModel.find({});
@@ -27,7 +28,6 @@ export async function POST (req){
     await UserModel.create({
         name,
         email,
-        phone,
         password:hashedPassword,
         role: users.length> 0 ?"USER" : "ADMIN",
     });

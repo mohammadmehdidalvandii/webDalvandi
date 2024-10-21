@@ -2,14 +2,14 @@ import { hash ,compare } from "bcryptjs";
 import { sign , verify } from "jsonwebtoken";
 
 // Logic Hash Password 
-const hashPassword = async (Password)=>{
-    const hashedPassword = await hash(Password , 12);
+const hashPassword = async (password)=>{
+    const hashedPassword = await hash(password , 12);
     return hashedPassword
 }
 
 // Logic Verify Password 
-const verifyPassword = async (Password , hashedPassword)=>{
-    const isValid = await compare(Password , hashedPassword);
+const verifyPassword = async (password , hashedPassword)=>{
+    const isValid = await compare(password , hashedPassword);
     return isValid
 }
 
