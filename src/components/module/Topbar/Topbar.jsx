@@ -16,6 +16,7 @@ function Topbar() {
             icon:"warning",
             buttons:["نه","آره"]
         }).then(async(result)=>{
+            console.log("result" , result)
             if(result){
                 const res = await fetch('/api/auth/signout',{
                     method:"POST",
