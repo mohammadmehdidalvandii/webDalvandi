@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
+import { FaInstagram  , FaLinkedinIn , FaGithub ,FaTelegram } from "react-icons/fa";
+
 
 function HomePage() {
   return (
@@ -13,6 +15,23 @@ function HomePage() {
                     <div className="flex gap-6 mt-6">
                         <Link href="/AboutMe"  className='btn_secondary'>درباه من</Link>
                         <Link href="/"  className='btn_primary'>تماس با من</Link>
+                    </div>
+                    <div className="block mt-8">
+                        <h5 className="block font-iranBold text-xl text-font-300">لینک شبکه های اجتماعی</h5>
+                        <div className="flex gap-6 mt-4">
+                        <Link href="#" className='text-xl duration-300 ease-linear hover:text-secondary-100' target='_blank'>
+                            <FaInstagram/>
+                        </Link>
+                        <Link href="#" className='text-xl duration-300 ease-linear hover:text-secondary-100' target='_blank'>
+                            <FaLinkedinIn/>
+                        </Link>
+                        <Link href="#" className='text-xl duration-300 ease-linear hover:text-secondary-100' target='_blank'>
+                            <FaGithub/>
+                        </Link>
+                        <Link href="#" className='text-xl duration-300 ease-linear hover:text-secondary-100' target='_blank'>
+                            <FaTelegram/>
+                        </Link>
+                        </div>
                     </div>
                 </div>
                 <div className="block">
