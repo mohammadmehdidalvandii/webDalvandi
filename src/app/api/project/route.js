@@ -23,7 +23,7 @@ export async function POST(req) {
 
     const bufferImg  = Buffer.from(await img.arrayBuffer());
     const fileName = Date.now() + img.name;
-    const imgPath = path.join(process.cwd(), "public/uploads" + fileName);
+    const imgPath = path.join(process.cwd(), "public/uploads/" + fileName);
 
     await writeFile(imgPath , bufferImg);
 
@@ -31,7 +31,7 @@ export async function POST(req) {
 
      const bufferSourceCode = Buffer.from(await sourceCode.arrayBuffer());
      const codeName = Date.now() + sourceCode.name;
-     const sourceCodePath = path.join(process.cwd() , "public/uploads" + codeName)
+     const sourceCodePath = path.join(process.cwd() , "public/uploads/" + codeName)
 
      await writeFile(sourceCodePath , bufferSourceCode)
 
