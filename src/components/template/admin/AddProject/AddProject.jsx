@@ -20,11 +20,15 @@ function AddProject() {
     const formData = new FormData();
 
     formData.append("name" , name )    
-    formData.append("techs" , techs.split(",") )
+    formData.append("techs" , techs.split("-") )
     formData.append("description" , description )
     formData.append("onlineLink" , onlineLink )
     formData.append("github" , github )
     formData.append("img" , img )
+    // img.forEach((file)=>{
+    //   console.log("img" , file)
+    //   formData.append("img[]",file)
+    // })
     formData.append("sourceCode" , sourceCode )
 
     const res = await fetch('/api/project',{
@@ -49,10 +53,11 @@ function AddProject() {
     }
 };
 
-const handleImageChange = (e) => {
-    const files = Array.from(e.target.files);
-    setImg((prevImages) => [...prevImages, ...files]); // اضافه کردن عکس‌های جدید به آرایه
-  };
+// const handleImageChange = (e) => {
+//     const files = e.target.files;
+//     console.log("files=>" ,files)
+//     setImg(Array.from(files));
+//   };
 
   return (
     <section className="block my-12 ">
@@ -117,8 +122,18 @@ const handleImageChange = (e) => {
                 className="block w-full h-12 mt-2 outline-secondary-100 rounded-md border border-font-300 pr-2"
               />
             </div>
-
-            <div className="flex mt-4">
+            {/* <div className="block w-full mb-4">
+              <label htmlFor="#" className="block">
+                انتخاب عکس‌ها
+              </label>
+              <input
+                type="file"
+                onChange={handleImageChange}
+                className="block w-full h-12 mt-2"
+                multiple // Allow multiple file selection
+              />
+            </div> */}
+             <div className="flex mt-4">
               <div className="block w-full mb-4">
                 <label htmlFor="#" className="block">
                   عکس 1
@@ -129,7 +144,7 @@ const handleImageChange = (e) => {
                   className="block w-full h-12 mt-2"
                 />
               </div>
-              <div className="block w-full mb-4">
+              {/* <div className="block w-full mb-4">
                 <label htmlFor="#" className="block">
                   عکس 2
                 </label>
@@ -158,8 +173,8 @@ const handleImageChange = (e) => {
                   onChange={(e) => setImg(e.target.files[0])}
                   className="block w-full h-12 mt-2"
                 />
-              </div>
-            </div>
+              </div> */}
+            </div> 
             <div className="block w-full mb-4">
               <label htmlFor="#" className="block">
                 سورس کد

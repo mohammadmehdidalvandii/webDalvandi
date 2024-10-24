@@ -14,8 +14,10 @@ export async function POST(req) {
     const description = formData.get("description");
     const onlineLink = formData.get("onlineLink");
     const github = formData.get("github");
-    const img = formData.get("img");
+    const img = formData.getAll("img[]");
     const sourceCode = formData.get("sourceCode");
+
+
 
     // generate Buffer for img
 
