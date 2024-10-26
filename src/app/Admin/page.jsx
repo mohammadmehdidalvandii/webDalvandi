@@ -5,8 +5,10 @@ import React from 'react'
 import ProjectModel from '@/models/Project'
 import ArticleModel from '@/models/Article'
 import MessageModel from '@/models/Message'
+import connectToDB from '@/config/db'
 
 async function page() {
+  await connectToDB()
   const project = await ProjectModel.find({})
   const article = await ArticleModel.find({})
   const message = await MessageModel.find({})
