@@ -8,6 +8,32 @@ function Latest({project , article , message}) {
     // Latest 
     const latestProject = project.slice(-1)[0];
     const latestArticle = article.slice(-1)[0];
+
+    // handler Removed message
+    const removedMessage = (msgID)=>{
+        swal({
+            title:"آیا اطمینان از حذف پیام دارید ؟",
+            icon:"warning",
+            buttons:["نه","آره"]
+          }).then(async(result)=>{
+            if(result){
+              const res =  await fetch(`/api/message/${msgID}`,{
+                method :"DELETE",
+                headers:{"Content-Type" : "application/json"}
+              })
+      
+              if(res.status === 200 ){
+                swal({
+                  title:"پیام مورد نظر شما با موفقیت حذف شد",
+                  icon:"success",
+                  buttons:"فهمیدم"
+                }).then(()=>{
+                  location.reload()
+                })
+              }
+            };
+          })
+    }
   return (
     <section className="block my-12">
         <div className="container">
@@ -45,7 +71,9 @@ function Latest({project , article , message}) {
                                 buttons:"خوندم"
                                })
                             }}>مشاهده پیام</button>
-                            <button className="flex justify-center items-center w-[120px] h-10 rounded-lg bg-red-700 text-white text-lg duration-300 hover:bg-red-500">حذف</button>
+                            <button className="flex justify-center items-center w-[120px] h-10 rounded-lg bg-red-700 text-white text-lg duration-300 hover:bg-red-500"
+                            onClick={()=>removedMessage(msg._id)}
+                            >حذف</button>
                         </div>
                     </div>
                         ))
