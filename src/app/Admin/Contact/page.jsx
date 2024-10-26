@@ -1,11 +1,13 @@
 import AdminLayout from '@/components/layout/AdminLayout/AdminLayout'
 import Messages from '@/components/template/admin/Messages/Messages'
 import React from 'react'
+import MessageModel from '@/models/Message';
 
-function page() {
+async function page() {
+  const message = await MessageModel.find({})
   return (
     <AdminLayout>
-        <Messages/>
+        <Messages messages={message}/>
     </AdminLayout>
   )
 }
