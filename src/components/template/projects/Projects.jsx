@@ -13,6 +13,7 @@ function Projects({projects}) {
             projects.slice().reverse().map(project=>(
               <ProjectCart
                 key={project.id}
+                id={project.id}
                 name={project.name}
                 img={project.img[0]}
               />

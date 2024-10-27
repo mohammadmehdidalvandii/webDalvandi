@@ -10,7 +10,7 @@ import { Navigation , Autoplay} from "swiper/modules";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-function Banner() {
+function Banner({images}) {
     const swiperRef = useRef(null)
 
 
@@ -28,33 +28,11 @@ function Banner() {
        slidesPerView={1}
        spaceBetween={10}
        className="swiperNavi">
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
+        {images.map((img , index)=>(
+        <SwiperSlide key={index}>
+            <img src={img} alt="banner project" className="block w-full h-full object-cover rounded-lg" />
         </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src="/assets/images/p-1.png" alt="banner project" className="block w-full h-full object-cover rounded-lg" />
-        </SwiperSlide>
+        ))}
       </Swiper>
       <div className="flex justify-center items-center gap-2 mt-10">
             <button className="btn_next">
