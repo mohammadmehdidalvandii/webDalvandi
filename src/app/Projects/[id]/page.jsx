@@ -6,6 +6,7 @@ import React from 'react'
 import ProjectModel from '@/models/Project';
 import connectToDB from '@/config/db';
 
+
 export const metadata = {
   title: "    جزئیات پروژه |  دالوندی",
   description: "برنامه نویس فرانت اند ",
@@ -13,7 +14,6 @@ export const metadata = {
 
 async function page({params}) {
   await connectToDB();
-
   const projectID  = params.id
   const project = await ProjectModel.findOne({_id:projectID})
 
