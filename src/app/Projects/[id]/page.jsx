@@ -1,3 +1,4 @@
+import Menubar from '@/components/module/MenuBar/Menubar';
 import Navbar from '@/components/module/Navbar/Navbar'
 import Banner from '@/components/template/ProjectSingle/Banner/Banner'
 import Details from '@/components/template/ProjectSingle/Details/Details'
@@ -14,6 +15,7 @@ function page() {
     <Navbar/>
     <Banner/>
     <Details/>
+    <Menubar/>
     </>
   )
 }

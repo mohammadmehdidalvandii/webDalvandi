@@ -1,3 +1,4 @@
+import Menubar from '@/components/module/MenuBar/Menubar';
 import Navbar from '@/components/module/Navbar/Navbar';
 import About from '@/components/template/about/About/About';
 import Skills from '@/components/template/about/Skills/Skills';
@@ -14,6 +15,7 @@ function page() {
         <Navbar/>
         <About/>
         <Skills/>
+        <Menubar/>
     </>
   )
 }

@@ -1,3 +1,4 @@
+import Menubar from '@/components/module/MenuBar/Menubar';
 import Navbar from '@/components/module/Navbar/Navbar'
 import Contact from '@/components/template/contactMe/Contact/Contact'
 import React from 'react'
@@ -12,6 +13,7 @@ function page() {
     <>
     <Navbar/>
     <Contact/>
+    <Menubar/>
     </>
   )
 }
