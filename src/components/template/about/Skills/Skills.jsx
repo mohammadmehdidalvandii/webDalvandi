@@ -2,7 +2,7 @@ import React from 'react'
 
 function Skills() {
   return (
-    <section className="block mt-12 mb-8">
+    <section className="block mt-12  mb-32 lg:mb-8">
         <div className="container">
             <div className="block">
                 <h4 className="block text-center font-iranBlack text-3xl">تخصص های من</h4>

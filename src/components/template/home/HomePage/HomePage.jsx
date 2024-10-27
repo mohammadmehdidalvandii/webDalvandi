@@ -5,7 +5,7 @@ import { FaInstagram  , FaLinkedinIn , FaGithub ,FaTelegram, FaPhone } from "rea
 
 function HomePage() {
   return (
-    <section className="block w-full mt-12">
+    <section className="block w-full mt-12 mb-32 lg:mb-8">
         <div className="container">
             <div className=" md:grid xs:flex xs:flex-col-reverse sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
                 <div className="block md:mt-32 sm:mt-16 xs:mt-12">

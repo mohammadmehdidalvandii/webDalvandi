@@ -2,7 +2,7 @@ import React from "react";
 
 function ArticleContent() {
   return (
-    <section className="block mt-12 mb-8">
+    <section className="block mt-12 mb-32 lg:mb-8">
       <div className="container max-w-[900px]">
         <div className="block">
           <h6 className="block text-center font-iranBlack text-2xl text-font-300">

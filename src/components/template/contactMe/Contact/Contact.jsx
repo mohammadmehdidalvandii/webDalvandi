@@ -37,7 +37,7 @@ const handlerSendMessage = async (e)=>{
 
 
   return (
-    <section className="block mt-12 mb-8">
+    <section className="block mt-12 mb-32 lg:mb-8">
         <div className="container">
             <div className="block">
                 <h5 className="title">تماس با من</h5>

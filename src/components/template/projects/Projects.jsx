@@ -3,7 +3,7 @@ import React from 'react'
 
 function Projects() {
   return (
-    <section className="block mt-12 mb-8"> 
+    <section className="block mt-12 mb-32 lg:mb-8"> 
        <div className="container">
        <div className="block">
             <h5 className="block text-center font-iranBlack text-3xl text-font-300">پروژه های من</h5>

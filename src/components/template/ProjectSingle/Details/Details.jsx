@@ -3,7 +3,7 @@ import React from "react";
 
 function Details() {
   return (
-    <section className="block mt-12 mb-8">
+    <section className="block mt-12 mb-32 lg:mb-8">
       <div className="container">
             <div className="block w-full bg-white rounded-lg shadow-sm p-4 shadow-font-200">
                 <div className="grid gap-6 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
