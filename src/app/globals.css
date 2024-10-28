@@ -94,3 +94,12 @@
       border-radius: 0.5rem;
       }
 /* custom style swiper Cards */
+/* style swal */
+.swal-button{
+  @apply btn_secondary w-full
+}
+.swal-button--cancel{
+  @apply btn_red
+}
+
+/* style swal */
