@@ -70,7 +70,7 @@ function Latest({project , article , message}) {
                     {
                         message.length > 0 ? 
                         message.map((msg)=>(
-                        <div className="flex justify-between items-center" key={msg._id}>
+                        <div className="flex justify-between items-center mb-3" key={msg._id}>
                         <span className="block">{msg.username}</span>
                         <div className="flex gap-4">
                             <button className="btn_primary" onClick={()=>{
