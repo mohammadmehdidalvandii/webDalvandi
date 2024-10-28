@@ -40,7 +40,7 @@ function Projects({projects}) {
             <img src={project.img[0]} alt="" className="block" />
             <span className="block text-center font-iranBlack mt-6">{project.name}</span>
             <div className="flex justify-between  mt-6">
-                <Link href={`/Projects/${project.id}?${project.name}`} className="btn_primary">مشاهده پروژه</Link>
+                <Link href={`/Projects/${project._id}?=${project.name}`} className="btn_primary">مشاهده پروژه</Link>
                 <button className="btn_red" onClick={()=>handlerRemovedProject(project._id , project.name)}>حذف پروژه</button>
             </div>
         </div>

@@ -39,13 +39,12 @@ function Latest({project , article , message}) {
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4">آخرین پروژه</h6>
                     {
                         project.length >= 0 ? 
-                        project.slice().reverse().map(pro=>(
-                          <ProjectCart 
-                            key={pro._id}
-                            img={pro.img[0]}
-                            name={pro.name}
-                          />
-                        ))
+                        <ProjectCart 
+                        key={project[project.length - 1]._id}
+                        id={project[project.length - 1]._id}
+                        img={project[project.length - 1].img[0]}
+                        name={project[project.length - 1].name}
+                    />
                         : 
                         <span className="block text-center font-iranBold ">پروژه وجود ندارد</span>
                     }
@@ -54,7 +53,7 @@ function Latest({project , article , message}) {
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4">آخرین بلاگ</h6>
                     {
                         article.length > 0 ? 
-                        article.slice().reverse().map(art=>(
+                        article.sort(-1).slice().reverse().map(art=>(
                           <ArticleCart key={art._id} />
                         ))
                         : 
