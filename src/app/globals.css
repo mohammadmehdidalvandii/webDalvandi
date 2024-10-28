@@ -25,6 +25,9 @@
   .link{
    @apply block text-xl font-iranBlack  duration-300 ease-linear hover:text-secondary-100;
   }
+  .link_hover{
+   @apply block text-xl font-iranBlack text-secondary-100;
+  }
   .link_active{
    @apply block text-xl font-iranBlack text-secondary-100;
   }
