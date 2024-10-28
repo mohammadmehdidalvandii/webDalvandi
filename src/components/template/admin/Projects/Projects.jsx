@@ -1,7 +1,33 @@
+"use client"
 import Link from "next/link"
 import React from 'react'
 
 function Projects({projects}) {
+
+    const handlerRemovedProject = (projectID , projectName)=>{
+        swal({
+            title:"آیا از حذف پروژه اطمینان دارید ؟",
+            icon:"warning",
+            buttons:["نه","آره"]
+        }).then(async (result)=>{
+            if(result){
+                const res =  await fetch(`/api/project/${projectID}`,{
+                    method:"DELETE",
+                    headers : {"Content-Type":"application/json"}
+                })
+                if(res.status === 200){
+                    swal({
+                        title:`پروژه با نام ${projectName} حذف شد`,
+                        icons:"success",
+                        buttons:"متوجه شدم"
+                    }).then(()=>{
+                        location.reload()
+                    })
+                }
+            }
+        })
+    }
+
   return (
     <section className="block my-12 h-[600] overscroll-y-auto">
 <div className="container">
@@ -12,9 +38,10 @@ function Projects({projects}) {
         {projects.slice().reverse().map(project=>(
         <div className="block bg-white rounded-lg p-4" key={project._id}>
             <img src={project.img[0]} alt="" className="block" />
-            <div className="flex justify-between mt-12">
-                <Link href={`/Projects/${project.name}`} className="btn_primary">مشاهده پروژه</Link>
-                <button className="btn_red">حذف پروژه</button>
+            <span className="block text-center font-iranBlack mt-6">{project.name}</span>
+            <div className="flex justify-between  mt-6">
+                <Link href={`/Projects/${project.id}?${project.name}`} className="btn_primary">مشاهده پروژه</Link>
+                <button className="btn_red" onClick={()=>handlerRemovedProject(project._id , project.name)}>حذف پروژه</button>
             </div>
         </div>
         ))}
