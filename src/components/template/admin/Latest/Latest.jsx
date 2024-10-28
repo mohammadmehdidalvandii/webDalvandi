@@ -5,10 +5,7 @@ import React from 'react'
 import swal from 'sweetalert'
 
 function Latest({project , article , message}) {
-    // Latest 
-    const latestProject = project.slice(-1)[0];
-    const latestArticle = article.slice(-1)[0];
-
+    
     // handler Removed message
     const removedMessage = (msgID)=>{
         swal({
@@ -41,8 +38,14 @@ function Latest({project , article , message}) {
                 <div className="block bg-white rounded-lg p-4 shadow-xl shadow-font-200 h-[400px] overflow-y-auto">
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4">آخرین پروژه</h6>
                     {
-                        project.length > 0 ? 
-                        <ProjectCart img={latestProject.img} name={latestProject.name}/>
+                        project.length >= 0 ? 
+                        project.slice().reverse().map(pro=>(
+                          <ProjectCart 
+                            key={pro._id}
+                            img={pro.img[0]}
+                            name={pro.name}
+                          />
+                        ))
                         : 
                         <span className="block text-center font-iranBold ">پروژه وجود ندارد</span>
                     }
@@ -50,8 +53,10 @@ function Latest({project , article , message}) {
                 <div className="block bg-white rounded-lg p-4 shadow-xl shadow-font-200 h-[400px] overflow-y-auto">
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4">آخرین بلاگ</h6>
                     {
-                        project.length > 0 ? 
-                        <ArticleCart  />
+                        article.length > 0 ? 
+                        article.slice().reverse().map(art=>(
+                          <ArticleCart key={art._id} />
+                        ))
                         : 
                         <span className="block text-center font-iranBold ">مقاله وجود ندارد</span>
                     }
