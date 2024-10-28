@@ -13,7 +13,7 @@ function AddArticle() {
         const formData = new FormData();
 
         formData.append("name", name)
-        formData.append("paragraph", paragraph.split("/"))
+        formData.append("paragraph", paragraph.split(","))
         formData.append("img", img)
 
         const res = await fetch('/api/article',{
@@ -55,7 +55,7 @@ function AddArticle() {
                         className="block w-full h-12 border border-font-300 pr-3 mt-3 rounded-md outline-secondary-100" />
                     </div>
                     <div className="block mb-6">
-                        <label htmlFor="" className='block font-iranBold text-sm mb-3'>متن  مقاله (برای جدا سازی پراگرف از / استفاده کنید)</label>
+                        <label htmlFor="" className='block font-iranBold text-sm mb-3'>متن  مقاله (برای جدا سازی پراگرف از (,) استفاده کنید)</label>
                         <textarea 
                         type="text" 
                         value={paragraph}

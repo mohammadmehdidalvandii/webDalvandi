@@ -17,7 +17,8 @@ function Blog({articles}) {
                 <ArticleCart 
                   key={article._id}
                   id={article._id}
-                  {...article}
+                  name={article.name}
+                  img={article.img}
                 />
               ))}
            </div>

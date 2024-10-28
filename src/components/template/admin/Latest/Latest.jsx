@@ -53,9 +53,13 @@ function Latest({project , article , message}) {
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4">آخرین بلاگ</h6>
                     {
                         article.length > 0 ? 
-                        article.sort(-1).slice().reverse().map(art=>(
-                          <ArticleCart key={art._id} />
-                        ))
+              
+                          <ArticleCart 
+                          key={article[article.length - 1]._id}
+                          id={article[article.length - 1]._id}
+                          img={article[article.length - 1].img}
+                          name={article[article.length - 1].name}
+                          />
                         : 
                         <span className="block text-center font-iranBold ">مقاله وجود ندارد</span>
                     }
