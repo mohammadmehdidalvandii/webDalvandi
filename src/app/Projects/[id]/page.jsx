@@ -5,6 +5,7 @@ import Details from '@/components/template/ProjectSingle/Details/Details'
 import React from 'react'
 import ProjectModel from '@/models/Project';
 import connectToDB from '@/config/db';
+import { authUser } from '@/utils/serverHelpers';
 
 
 export const metadata = {
@@ -13,13 +14,14 @@ export const metadata = {
 };
 
 async function page({params}) {
+  const user = await authUser()
   await connectToDB();
   const projectID  = params.id
   const project = await ProjectModel.findOne({_id:projectID})
 
   return (
     <>
-    <Navbar/>
+    <Navbar isLogin={user?true:false}/>
     <Banner images={project.img}/>
     <Details projects={project}/>
     <Menubar/>

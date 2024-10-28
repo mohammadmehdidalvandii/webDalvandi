@@ -1,6 +1,7 @@
 import Menubar from '@/components/module/MenuBar/Menubar';
 import Navbar from '@/components/module/Navbar/Navbar'
 import Contact from '@/components/template/contactMe/Contact/Contact'
+import { authUser } from '@/utils/serverHelpers';
 import React from 'react'
 
 export const metadata = {
@@ -8,10 +9,11 @@ export const metadata = {
     description: "برنامه نویس فرانت اند ",
   };
 
-function page() {
+async function page() {
+  const user = await authUser()
   return (
     <>
-    <Navbar/>
+    <Navbar isLogin={user?true:false}/>
     <Contact/>
     <Menubar/>
     </>

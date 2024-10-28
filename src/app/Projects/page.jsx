@@ -4,6 +4,7 @@ import Projects from '@/components/template/projects/Projects'
 import connectToDB from '@/config/db';
 import React from 'react'
 import ProjectModel from '@/models/Project';
+import { authUser } from '@/utils/serverHelpers';
 
 export const metadata = {
   title: "  پروژه ها |  دالوندی",
@@ -11,11 +12,12 @@ export const metadata = {
 };
 
 async function page() {
+  const user = await authUser()
   await connectToDB();
   const projects = await ProjectModel.find({})
   return (
     <>
-    <Navbar/>
+    <Navbar isLogin={user?true:false}/>
     <Projects projects={projects}/>
     <Menubar/>
     </>

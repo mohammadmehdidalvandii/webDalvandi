@@ -4,6 +4,7 @@ import Blog from '@/components/template/articles/Blog/Blog';
 import React from 'react';
 import connectToDB  from '@/config/db'; 
 import ArticleModel from '@/models/Article';
+import { authUser } from '@/utils/serverHelpers';
 
 
 export const metadata = {
@@ -12,13 +13,14 @@ export const metadata = {
   };
 
 async function page() {
+  const user = await authUser()
   await connectToDB();
 
   const articles = await ArticleModel.find({});
 
   return (
     <>
-    <Navbar/>
+    <Navbar isLogin={user?true:false}/>
     <Blog articles={articles}/>
     <Menubar/>
     </>

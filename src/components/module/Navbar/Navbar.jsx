@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-function Navbar() {
+function Navbar({isLogin}) {
     const pathName = usePathname();
     const [activeMenu , setActiveMenu] = useState('/');
     
@@ -32,7 +32,11 @@ function Navbar() {
                 </ul>
                  <Link href="/" className='block uppercase font-iranBlack text-sm lg:text-3xl sm:text-2xl xs:text-sm'><span className="text-secondary-100">dalvnadi</span> - <span className="text-primary-100">front-end</span></Link>
 
-                 <Link href="/ContactMe" className={activeMenu === '/ContactMe' ? "link_hover" : "link"}>تماس با من</Link>
+                 {!isLogin? (
+                     <Link href="/ContactMe" className={activeMenu === '/ContactMe' ? "link_hover" : "link"}>تماس با من</Link>
+                    ):(
+                     <Link href="/Admin" className={activeMenu === '/Admin' ? "link_hover" : "link"}>پنل کاربری</Link>
+                 )}
             </div>
         </div>
     </section>
