@@ -19,7 +19,7 @@ export async function POST (req){
         await writeFile(imgPath , buffer);
 
         const skill = await SkillModel.create({
-            img:`http://localhost:3000/uploads/${fileName}`
+            img:`https://web-dalvandi.chbk.app/uploads/${fileName}`
         });
 
         return Response.json(
