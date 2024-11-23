@@ -26,7 +26,7 @@ async function AdminLayout({children}) {
 
   return (
     <>
-    <Topbar/>
+    <Topbar name={user.name}/>
     {children}
     </>
   )

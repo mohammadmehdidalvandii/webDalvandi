@@ -20,7 +20,7 @@ export async function POST (req){
         const isValidEmail = validEmail(email);
         const isValidPassword = validPassword(password);
 
-        if(!isValidEmail || isValidPassword){
+        if(!isValidEmail || !isValidPassword){
             return Response.json(
                 {message:"Email or Password Is inValid"},
                 {status:419},

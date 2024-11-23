@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 import swal from 'sweetalert'
 
-function Topbar() {
+function Topbar({name}) {
 
     const router = useRouter();
 
@@ -37,7 +37,7 @@ function Topbar() {
   return (
     <section className="block bg-white h-12 pt-2 px-4">
         <div className="flex items-center justify-between">
-            <h5 className="block font-iranBlack text-xl text-font-300">خوش آمدید محمدمهدی دالوندی عزیز</h5>
+            <h5 className="block font-iranBlack text-xl text-font-300">خوش آمدید{name} عزیز</h5>
             <ul className="flex gap-6">
                 <li className="block">
                     <Link href='/Admin' className="block font-iranBold text-font-300 duration-300 ease-linear hover:text-secondary-100">پیشخوان</Link>

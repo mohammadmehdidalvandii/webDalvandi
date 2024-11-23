@@ -6,6 +6,8 @@ import ProjectModel from '@/models/Project'
 import ArticleModel from '@/models/Article'
 import MessageModel from '@/models/Message'
 import connectToDB from '@/config/db'
+import dotenv from 'dotenv';
+dotenv.config()
 
 async function page() {
   await connectToDB()

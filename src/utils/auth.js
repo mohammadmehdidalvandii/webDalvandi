@@ -15,7 +15,7 @@ const verifyPassword = async (password , hashedPassword)=>{
 
 // Logic Created Access Token 
 const generateAccessToken = (data)=>{
-    const token = sign({...data} , process.env.ACCESS_TOKEN_SC,{
+    const token = sign({...data} , process.env.JWT_SECRET,{
         expiresIn :"10d"
     });
     return token
@@ -23,7 +23,7 @@ const generateAccessToken = (data)=>{
 
 const verifyAccessToken = (token)=>{
     try{
-        const tokenPayload = verify(token , process.env.ACCESS_TOKEN_SC);
+        const tokenPayload = verify(token , process.env.JWT_SECRET);
         return tokenPayload
     }catch(err){
         console.log("Verify Access Token Error =>" , err)
@@ -33,7 +33,7 @@ const verifyAccessToken = (token)=>{
 
 // Logic Created Refresh Token 
 const generateRefreshToken = (data)=>{
-    const token = sign({...data}, process.env.Refresh_TOKEN_SC,{
+    const token = sign({...data}, process.env.JWT_SECRET,{
         expiresIn :"5d"
     })
     return token;

@@ -38,12 +38,12 @@ function Latest({project , article , message}) {
                 <div className="block bg-white rounded-lg p-4 shadow-xl shadow-font-200 h-[400px] overflow-y-auto">
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4">آخرین پروژه</h6>
                     {
-                        project.length >= 0 ? 
+                    project.length > 0 ? 
                         <ProjectCart 
-                        key={project[project.length - 1]._id}
-                        id={project[project.length - 1]._id}
-                        img={project[project.length - 1].img[0]}
-                        name={project[project.length - 1].name}
+                        key={project[project.length - 1]?._id}
+                        id={project[project.length - 1]?._id}
+                        img={project[project.length - 1]?.img[0]}
+                        name={project[project.length - 1]?.name}
                     />
                         : 
                         <span className="block text-center font-iranBold ">پروژه وجود ندارد</span>
@@ -52,13 +52,13 @@ function Latest({project , article , message}) {
                 <div className="block bg-white rounded-lg p-4 shadow-xl shadow-font-200 h-[400px] overflow-y-auto">
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4">آخرین بلاگ</h6>
                     {
-                        article.length > 0 ? 
+                     article.length > 0 ? 
               
                           <ArticleCart 
-                          key={article[article.length - 1]._id}
-                          id={article[article.length - 1]._id}
-                          img={article[article.length - 1].img}
-                          name={article[article.length - 1].name}
+                          key={article[article.length - 1]?._id}
+                          id={article[article.length - 1]?._id}
+                          img={article[article.length - 1]?.img[0]}
+                          name={article[article.length - 1]?.name}
                           />
                         : 
                         <span className="block text-center font-iranBold ">مقاله وجود ندارد</span>
@@ -68,7 +68,7 @@ function Latest({project , article , message}) {
                 <div className="block bg-white rounded-lg p-4 shadow-xl shadow-font-200 h-[400px] overflow-y-auto">
                     <h6 className="block font-iranBold text-lg text-secondary-100 mb-4"> تماس ها</h6>
                     {
-                        message.length > 0 ? 
+                 message?.length > 0 ? 
                         message.map((msg)=>(
                         <div className="flex justify-between items-center mb-3" key={msg._id}>
                         <span className="block">{msg.username}</span>
