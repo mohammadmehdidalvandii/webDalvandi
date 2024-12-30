@@ -29,7 +29,7 @@ function Details({projects}) {
                         <div className="flex items-center gap-6">
                             <Link href={projects.onlineLink} target="-blank" className="btn_primary">نمایش آنلاین</Link>
                             <Link href={projects.github} target="-blank" className="btn_primary">گیت هاب</Link>
-                            <Link href={projects.sourceCode}  download={`${projects.name}.rar`} target="_blank" className="btn_primary">سورس کد</Link>
+                            {/* <Link href={projects.sourceCode}  download={`${projects.name}.rar`} target="_blank" className="btn_primary">سورس کد</Link> */}
                         </div>
                     </div>
                 </div>

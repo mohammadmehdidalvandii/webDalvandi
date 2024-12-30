@@ -29,7 +29,7 @@ function AddProject() {
       console.log("img" , file)
       formData.append("img[]",file)
     })
-    formData.append("sourceCode" , sourceCode )
+    // formData.append("sourceCode" , sourceCode )
 
     const res = await fetch('/api/project',{
         method :"POST",
@@ -133,16 +133,7 @@ const handleImageChange = (e) => {
                 multiple // Allow multiple file selection
               />
             </div>
-            <div className="block w-full mb-4">
-              <label htmlFor="#" className="block">
-                سورس کد
-              </label>
-              <input
-                type="file"
-                onChange={(e) => setSourceCode(e.target.files[0])}
-                className="block w-full h-12 mt-2"
-              />
-            </div>
+    
             <button
               className="btn_secondary w-full"
               onClick={handlerAddProject}
