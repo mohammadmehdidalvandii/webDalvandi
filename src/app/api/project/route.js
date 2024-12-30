@@ -28,7 +28,7 @@ export async function POST(req) {
       const fileName = Date.now() + path.extname(file.name); // اضافه کردن پسوند فایل
       const imgPath = path.join(uploadDir, fileName);
       await writeFile(imgPath, bufferImg);
-      imgUrls.push(`https://web-dalvandi.chbk.app/uploads/${fileName}`);
+      imgUrls.push(`http://localhost:3000/uploads/${fileName}`);
     }
 
     // ذخیره سورس کد

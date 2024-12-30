@@ -34,9 +34,9 @@ module.exports = {
           100:"#16A34A"
         }
       },
-      borderRadius:{
-        50:"50%"
-      },
+      // borderRadius:{
+      //   50:"50%"
+      // },
       container:{
         center:"true"
       },
